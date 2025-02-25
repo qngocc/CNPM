@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tính Toán S</title>
+    <title>Tính toán S</title>
 </head>
 <body>
-    <h2>Nhập Số N</h2>
+    <h2>Nhập số N</h2>
     <input type="number" id="inputN" placeholder="Nhập số N">
     <button onclick="calculateS()">Tính S</button>
     <p id="result"></p>
@@ -15,7 +15,10 @@
         function Ictu(x) {
             let res = 0;
             for (let i = 1; i <= x; i++) {
-                res += i * 10 + i;
+                let temp = i.toString();
+                temp = temp + temp;
+                let num = parseInt(temp);
+                res += num;
             }
             return res;
         }
